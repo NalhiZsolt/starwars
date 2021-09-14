@@ -1,0 +1,33 @@
+<section class="container">
+  <nav class="nav">
+    <app-nav></app-nav>
+  </nav>
+
+
+
+  <div class="content__container">
+    <div class="content__description">
+
+      <app-character-details class="content__details" [selectedCharacter]="selectedCharacter"
+        (selectedLightCharacter)="selectLightCharacter($event)" (selectedDarkCharacter)="selectDarkCharacter($event)">
+      </app-character-details>
+    </div>
+    <div class="swiper__container">
+      <swiper *ngIf="type == 'component' && show" class="swiper" [config]="config" [disabled]="disabled"
+        (indexChange)="onIndexChange($event)" (swiperTransitionStart)="onSwiperEvent('transitionStart')"
+        (swiperTransitionEnd)="onSwiperEvent('transitionEnd')">
+
+        <div *ngFor="let slide of characterList; let i = index" class="swiper-slide">
+          <div class="swiper__background-circle" [ngStyle]="{'background-color': colorList[i]}"></div>
+          <div class="swiper__image-container">
+            <img class="swiper__image" [src]="slide.picture" alt="">
+          </div>
+        </div>
+      </swiper>
+
+    </div>
+  </div>
+
+  <button class="button__battle" (click)="battle()"
+    [disabled]="!selectedLightCharacter || !selectedDarkCharacter">Küzdelem szimulálása</button>
+</section>

@@ -1,0 +1,28 @@
+<section class="container">
+  <h2 class="title">Válassz két harcost az ellenkező oldalakból</h2>
+  <div class="side">
+    <div class="side__marker">
+    </div>
+    <div class="side__text">
+      <h4 class="side__title">OLDAL:</h4>
+      <h3 class="side__character">{{selectedCharacter.side}}</h3>
+    </div>
+  </div>
+  <div class="power">
+    <div class="power__marker">
+      <img src="../../../assets/images/star.svg" alt="">
+    </div>
+    <div class="power__text">
+      <h4 class="power__title">KÜLÖNLEGES ERŐ:</h4>
+      <h3 class="power__character">{{selectedCharacter.power}}</h3>
+    </div>
+  </div>
+  <h1 class="character__name" [innerHTML]="selectedCharacter.name"></h1>
+  <button class="btn character__select" (click)="select()"><h4>KIVÁLASZTOM</h4></button>
+  <div class="description">
+    <div class="description__marker"></div>
+    <h4 class="description__title">LEÍRÁS</h4>
+  </div>
+  <p class="description__character">{{selectedCharacter.description}}</p>
+</section>
+

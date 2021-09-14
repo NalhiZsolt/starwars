@@ -1,0 +1,64 @@
+@use '../../styles/colors';
+@use '../../styles/mixins';
+
+.login__container {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../../../assets/images/bg_1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.login__container-subtitle {
+  font-size: 30px;
+  font-family: Starjedi;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+}
+
+.login__container-title {
+  font-size: 70px;
+  font-family: SfDistantGalaxyAltoutline-e2Bp;
+  color: white;
+  margin-bottom: 100px;
+  letter-spacing: 3px;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.form__input {
+  text-align: center;
+  padding: 10px;
+  border: hidden;
+  border-radius: 5px;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.form__label {
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  margin: 10px 0 5px
+}
+
+.btn {
+  @include mixins.btn(colors.$yellow, colors.$black)
+};

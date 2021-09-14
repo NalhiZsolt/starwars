@@ -1,0 +1,50 @@
+<section class="container">
+  <nav class="nav">
+    <app-nav></app-nav>
+  </nav>
+  <h2 class="arena__title">A Tudás legyen veled!</h2>
+  <div class="arena__container">
+    <div *ngIf="!lightWinner" class="darkSide">
+      <h3 class="side__title" *ngIf="!lightWinner && !darkWinner">Sötét oldal</h3>
+      <div class="side__character-container">
+        <div class="side__background-circle" [ngStyle]="{'background-color': colorList[1]}"></div>
+        <div class="side__image-container">
+          <img class="side__image" [src]="selectedDarkCharacter.picture" alt="">
+        </div>
+      </div>
+      <div class="side__character-name">
+        <h3 [innerHTML]="selectedDarkCharacter.name"></h3>
+      </div>
+      <div class="side__indicator-dark" *ngIf="!lightWinner && !darkWinner">
+        <div class="progressbar" [ngStyle]="{'width': +darkpercent+'%'}"></div>
+      </div>
+      <div class="percent" *ngIf="!lightWinner && !darkWinner">
+        <h4>{{darkpercent}} %</h4>
+      </div>
+    </div>
+
+    <div *ngIf="!darkWinner && !lightWinner" class="vs">
+      VS
+    </div>
+
+    <div *ngIf="!darkWinner" class="lightSide">
+      <h3 class="side__title" *ngIf="!lightWinner && !darkWinner">Világos oldal</h3>
+      <div class="side__character-container">
+        <div class="side__background-circle" [ngStyle]="{'background-color': colorList[3]}"></div>
+        <div class="side__image-container">
+          <img class="side__image" [src]="selectedLightCharacter.picture" alt="">
+        </div>
+      </div>
+      <div class="side__character-name">
+        <h3 [innerHTML]="selectedLightCharacter.name"></h3>
+      </div>
+      <div class="side__indicator-light" *ngIf="!lightWinner && !darkWinner">
+        <div class="progressbar" [ngStyle]="{'width': +lightpercent+'%'}"></div>
+      </div>
+      <div class="percent" *ngIf="!lightWinner && !darkWinner">
+        <h4>{{lightpercent}} %</h4>
+      </div>
+    </div>
+  </div>
+  <button class="btn" *ngIf="lightWinner || darkWinner" (click)="return()">Vissza a fedélzetre</button>
+</section>

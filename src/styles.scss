@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'Starjedi';
+  src: url('./assets/fonts/Starjedi.ttf')  format('truetype');
+};
+@font-face {
+  font-family: 'SfDistantGalaxyAltoutline-e2Bp';
+  src: url('./assets/fonts/SfDistantGalaxyAltoutline-e2Bp.ttf')  format('truetype');
+};
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

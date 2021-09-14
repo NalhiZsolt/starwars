@@ -1,0 +1,125 @@
+@use '../../styles/colors';
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../assets/images/bg_2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+nav {
+  width: 90%;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+.swiper-button-next, .swiper-button-prev {
+  top: 30px !important;
+}
+
+
+
+.content__container {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.contnet__description {
+  width: 90vw;
+  max-width: 100%;
+  overflow: hidden;
+  padding:10px;
+}
+
+.swiper__container {
+  width: 90vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+}
+.swiper {
+  padding: 1px;
+}
+
+.swiper-slide {
+
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+
+
+}
+
+.swiper__image-container {
+  z-index: 100;
+  position: relative;
+  //height: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper__background-circle {
+  border-radius: 99em;
+  width: 40vw;
+  height: 40vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.swiper__image {
+  z-index: 10;
+  max-width: 70%;
+  max-height: 70%;
+  margin-right: 150px;
+}
+.button__battle {
+  cursor: pointer;
+  position: relative;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -0%);
+  margin-top: 50px;
+  padding: 10px;
+  border:none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-image: linear-gradient(90deg, colors.$blue, colors.$red);
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .content__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+  .button__battle {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -100%);
+    margin-top: 0;
+  }
+  .swiper__background-circle {
+    width: 25vw;
+    height: 25vw;
+  }
+  .contnet__description, .swiper__container {
+    width: 45vw;
+  }
+  .swiper__image-container {
+    height: 50vw;
+  }
+
+}

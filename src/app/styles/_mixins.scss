@@ -1,0 +1,18 @@
+@use 'sass:color';
+
+@mixin btn($background, $text) {
+  text-align: center;
+  padding: 15px 45px;
+  border: hidden;
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  //width: 70%;
+  background-color: $background;
+  &:hover {
+      background-color: color.scale($background, $lightness: -10%);
+  }
+}
+

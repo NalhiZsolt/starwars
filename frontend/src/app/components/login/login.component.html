@@ -1,0 +1,16 @@
+<div class="login__container">
+  <div class="login__form-container">
+    <h2>Webstar</h2>
+    <h1>Frontend</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <label for="username">Felhasználónév:</label>
+      <input type="text" name="" id="username" formControlName="username" >
+      <label for="password">Jelszó:</label>
+      <input type="password" name="" id="password" formControlName="password">
+      <div class="">
+        <button [disabled]="loginForm.invalid">Belépés</button>
+
+      </div>
+    </form>
+  </div>
+</div>

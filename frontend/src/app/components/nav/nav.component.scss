@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'Starjedi';
+  src: url('../../../assets/fonts/Starjedi.ttf')  format('truetype');
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-family: Poppins;
+  font-weight: 700;
+  color: white;
+  padding: 1rem 0;
+}
+.inner-container {
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+}
+.inner-container p {
+  margin: 0 10px
+}

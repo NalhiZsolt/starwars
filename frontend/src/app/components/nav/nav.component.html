@@ -1,0 +1,15 @@
+<section>
+  <div class="container">
+    <div class="inner-container">
+      <img src="../../../assets/images/user.svg" alt="">
+      <p> {{loggedInUser.lastName}} {{loggedInUser.firstName}}</p>
+
+    </div>
+    <div class="inner-container" (click)="logout()">
+
+      <p>Űrhajó elhagyása </p>
+      <img src="../../../assets/images/logout.svg" alt="">
+    </div>
+  </div>
+  <hr>
+</section>
